@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+
+  <div class="fixed inset-0 z-50 pointer-events-none peer-checked:pointer-events-auto transition-all duration-300">
+    <label for="menu-toggle" class="fixed inset-0 bg-gray-900 bg-opacity-50 opacity-0 peer-checked:opacity-100 transition-opacity duration-300 pointer-events-none peer-checked:pointer-events-auto cursor-pointer block"></label>
+    
+    <aside class="fixed top-0 left-0 bottom-0 w-64 bg-gray-900 text-white flex flex-col z-50 transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 pointer-events-auto">
+      <div class="flex justify-between items-center p-6 border-b border-gray-100">
+        <span class="text-2xl font-bold">Dorazz</span>
+        <label for="menu-toggle" class="text-gray-400 hover:text-white cursor-pointer">
+          <i class="fas fa-times text-2xl"></i>
+        </label>
+      </div>
+
+      <nav class="flex-1 mt-4">
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-home w-5"></i> Dashboard
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-shopping-cart w-5"></i> Orders
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-box w-5"></i> Products
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-users w-5"></i> Customers
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-chart-line w-5"></i> Reports
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-blue-600 transition">
+          <i class="fas fa-cog w-2"></i> Settings
+        </a>
+      </nav>
+    </aside>
+  </div>
+
+  <div class="flex min-h-screen">
+    <aside class="w-60 bg-purple-500 text-white hidden md:flex flex-col shrink-0 sticky top-0 h-screen overflow-y-auto">
+      <div class="text-2x1 font-bold p-5 border-b border-black">
+        Dorazz
+      </div>
+      <nav class="flex-1 mt-3">
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition">
+          <i class="fas fa-shopping-cart"></i> Orders
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition">
+          <i class="fas fa-box"></i> Products
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition">
+          <i class="fas fa-users"></i> Customers
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition">
+          <i class="fas fa-chart-line"></i> Reports
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 hover:bg-purple-600 transition ">
+          <i class="fas fa-cog"></i> Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="bg-white shadow sticky top-0 z-30">
+        <div class="flex items-center justify-between p-4 gap-4">
+
+          <label for="menu-toggle" class="md:hidden text-gray-700 hover:text-blue-600 cursor-pointer">
+            <i class="fas fa-bars text-2xl"></i>
+          </label>
+
+          <h1 class="text-xl md:text-1xl font-bold truncate">
+          Store Manager
+          </h1>
+
+          <div class="flex items-center gap-3 md:gap-4 ml-auto">
+            <input type="text" placeholder="Search..." class="hidden sm:block border rounded-lg px-3 py-1.5 text-sm">
+            
+            <button class="text-gray-600 hover:text-blue-600">
+              <i class="fas fa-shopping-cart text-lg"></i>
+            </button>
+
+            <button class="text-gray-600 hover:text-blue-600">
+              <i class="fas fa-bell text-lg"></i>
+            </button>
+
+            <img src="fakhri-labib-ZhBGD4vykCU-unsplash.jpg" class="rounded-full w-8 h-8 object-cover" alt="Profile">
+          </div>
+        </div>
+      </header>
+
+      <main class="p-4 md:p-6 space-y-6">
+        <!-- Page Header -->
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <div>
+            <h2 class="text-3xl md:text-3xl font-bold tracking-tight">
+              Admin Dashsboard
+            </h2>
+            <p class="text-gray-500 text-sm">
+              Manage your store effectively
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:flex gap-2">
+            <button class="bg-yellow-400 text-white text-sm px-4 py-2.5 rounded-lg hover:bg-yellow-300 transition font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2">
+             + Add Product
+            </button>
+            <button class="bg-green-600 text-white text-sm px-4 py-2.5 rounded-lg hover:bg-green-700 transition font-medium focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+              Report
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
+          <!-- Card 1 -->
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-gray-500 text-sm font-medium">Total Orders</p>
+                <h2 class="text-2xl font-bold mt-1 text-gray-800">1,250</h2>
+              </div>
+              <div class="p-3 bg-blue-50 rounded-lg">
+                <i class="fas fa-shopping-cart text-2xl text-blue-600"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-gray-500 text-sm font-medium">Total Revenue</p>
+                <h2 class="text-2xl font-bold mt-1 text-gray-800">$12,000</h2>
+              </div>
+              <div class="p-3 bg-green-50 rounded-lg">
+                <i class="fas fa-dollar-sign text-2xl text-green-600"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-gray-500 text-sm font-medium">New Customers</p>
+                <h2 class="text-2xl font-bold mt-1 text-gray-800">356</h2>
+              </div>
+              <div class="p-3 bg-orange-50 rounded-lg">
+                <i class="fas fa-user-plus text-2xl text-purple-500"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-gray-500 text-sm font-medium">Products in Stock</p>
+                <h2 class="text-2xl font-bold mt-1 text-gray-800">720</h2>
+              </div>
+              <div class="p-3 bg-purple-50 rounded-lg">
+                <i class="fas fa-box-open text-2xl text-purple-600"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+          <h3 class="text-xl font-bold mb-4 text-gray-800">Recent Orders</h3>
+          <div class="overflow-x-auto -mx-5 px-5">
+            <table class="w-full min-w-[500px]">
+              <thead class="bg-gray-50">
+                <tr class="text-xs text-gray-500 uppercase tracking-wider">
+                  <th class="p-3 text-left">Order ID</th>
+                  <th class="p-3 text-left">Customer</th>
+                  <th class="p-3 text-left">Product</th>
+                  <th class="p-3 text-left">Date</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-gray-700">
+                <tr class="border-b border-gray-100">
+                  <td class="p-3 font-semibold">#1001</td>
+                  <td class="p-3 flex items-center gap-2">
+                    <img src="ahmed-elnokrashy-_QGWfMaZALA-unsplash.jpg" class="rounded-full w-6 h-6" alt="Avatar">
+                    <span>Ahmedkhan</span>
+                  </td>
+                  <td class="p-3">Gaming Laptop</td>
+                  <td class="p-3 text-gray-500">15 Jul 2026</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="p-3 font-semibold">#14002</td>
+                  <td class="p-3 flex items-center gap-2">
+                    <img src="maria-elizabeth-74U-L71uRuY-unsplash.jpg" class="rounded-full w-6 h-6" alt="Avatar">
+                    <span>MariaBee</span>
+                  </td>
+                  <td class="p-3">Headphones</td>
+                  <td class="p-3 text-gray-500">15 Jul 2026</td>
+                </tr>
+                <td class="p-3 font-semibold">#14002</td>
+                  <td class="p-3 flex items-center gap-2">
+                    <img src="fakhri-labib-ZhBGD4vykCU-unsplash.jpg" class="rounded-full w-6 h-6" alt="Avatar">
+                    <span>FakharZaman</span>
+                  </td>
+                  <td class="p-3">Gaming Mouse</td>
+                  <td class="p-3 text-gray-500">15 Jul 2026</td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-gray-800">Products</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+              <img src="robert-torres-mcMhAxf2rT0-unsplash.jpg" class="w-full h-48 object-cover" alt="Mouse">
+              <div class="p-4">
+                <h2 class="font-bold text-lg text-gray-800">Gaming Mouse</h2>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="text-blue-600 font-bold text-lg">$59</span>
+                  <span class="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+              <img src="pngtree-the-lighting-of-the-gaming-keyboard-in-full-rainbow-color-picture-image_2740730.jpg" class="w-full h-48 object-cover" alt="Keyboard">
+              <div class="p-4">
+                <h2 class="font-bold text-lg text-gray-800">Keyboard</h2>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="text-blue-600 font-bold text-lg">$120</span>
+                  <span class="text-xs bg-red-50 text-red-600 px-2.5 py-1 rounded-full font-medium">Low Stock</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+              <img src="image-comfortable-beautiful-gaming-chair_800563-4856.avif" class="w-full h-48 object-cover" alt="Chair">
+              <div class="p-4">
+                <h2 class="font-bold text-lg text-gray-800">Gaming Chair</h2>
+                <div class="flex items-center justify-between mt-2">
+                  <span class="text-blue-600 font-bold text-lg">$350</span>
+                  <span class="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-gray-800 text-white text-center py-5 text-sm">
+        Built with Tailwind CSS ; Dorazz
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
